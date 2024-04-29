@@ -11,13 +11,16 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "ourusers")
+@Table(name = "ourusers", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class OurUsers implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(unique = true)
     private String email;
+
     private String password;
     private String role;
     @Override
