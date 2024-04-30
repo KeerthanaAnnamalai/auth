@@ -23,7 +23,7 @@ public class AdminUsers {
         return ResponseEntity.ok(productRepo.findAll());
     }
 
-    @PostMapping("/admin/saveproduct")
+    @PostMapping("/admin/save-product")
     public ResponseEntity<Object> signUp(@RequestBody ReqRes productRequest){
         Product productToSave = new Product();
         productToSave.setName(productRequest.getName());
@@ -36,8 +36,8 @@ public class AdminUsers {
         return ResponseEntity.ok("USers alone can access this ApI only");
     }
 
-    @GetMapping("/adminuser/both")
-    public ResponseEntity<Object> bothAdminaAndUsersApi(){
+    @GetMapping("/admin-user/both")
+    public ResponseEntity<Object> bothAdminAndUsersApi(){
         return ResponseEntity.ok("Both Admin and Users Can  access the api");
     }
 

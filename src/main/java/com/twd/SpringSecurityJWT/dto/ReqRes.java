@@ -7,6 +7,7 @@ import com.twd.SpringSecurityJWT.entity.OurUsers;
 import com.twd.SpringSecurityJWT.entity.Product;
 import lombok.Data;
 
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -24,6 +25,7 @@ public class ReqRes {
     private String email;
     private String role;
     private String password;
+    private Date createdAt;
     private List<Product> products;
     private OurUsers ourUsers;
 }
